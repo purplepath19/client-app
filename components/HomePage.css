@@ -1,0 +1,22 @@
+.main-image {
+    font-size: 30px;
+    border: 1px solid black;
+    padding: 100px;
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .card {
+    flex: 0 0 calc(33.33% - 20px);
+    box-sizing: border-box;
+    border: 1px solid black;
+  }
+  
+  /* The image will take the whole container and they will be links */
+  .card img {
+    max-width: 100%;
+  }
+  

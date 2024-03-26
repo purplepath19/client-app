@@ -1,0 +1,29 @@
+.navbar {
+    position: sticky;
+    background-color: beige;
+    height: 55px;
+    color: #fff; 
+    padding: 15px; 
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between;
+    align-items: center;
+    /* background-image: url(../src/assets/bg.png); */
+    background-repeat: none;
+}
+
+.logo-link{
+    cursor:pointer;
+    color:black;
+}
+
+.w-image {
+    border-radius: 40px;
+    width: 80px;
+}
+
+.navbar-link{
+    cursor: pointer;
+    list-style-type: none;
+    color:black;
+}
+
