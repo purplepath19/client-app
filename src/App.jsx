@@ -1,37 +1,14 @@
-// import HomePage from "./components/HomePage";
-// import { BrowserRouter, Route, Routes } from "react-router-dom";
-// import Navbar from "./components/Navbar";
-// import SignUp from "../src/pages/SignUp";
-
-
-// function App() {
-
- 
-
-//   return (
-//     <BrowserRouter>
-//     <Navbar />
-
-//       <Routes>
-//         <Route path="/" element={<HomePage />} />
-//         <Route path="/signup" element={<SignUp />} /> 
-      
-//       </Routes>
-//     </BrowserRouter>
-//   );
-// }
-
-// export default App;
-
-
 // CODE ALONG
 import "./App.css";
 import { Routes, Route, Navigate, Outlet } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
 import SignUp from "./pages/SignUp";
+import MainPage from "./pages/MainPage";
 
 import LoginPage from "./pages/LoginPage";
+import InfoPage from "./pages/InfoPage";
+import Resources from "./pages/Resources";
 
 function App() {
   const getToken = () => {
@@ -64,6 +41,9 @@ function App() {
 
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="info" element={<InfoPage />} />
+          <Route path="/main" element={<MainPage />} />
+          <Route path="resources" element={<Resources /> } /> 
 
         </Route>
 

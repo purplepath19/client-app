@@ -14,13 +14,14 @@ const Navbar = () => {
         {/* <img src={wImage} alt="Logo" className="w-image" /> */}
       </h2>
 
-      {/* These will be links  */}
+      {/* Links to Login and Signup  */}
       <ul>
-        <li className="navbar-link">Directory</li>
-
+        <Link to="/login" className="login-button-link"> 
+        <li className="navbar-link">Login</li>
+        </Link>
         {/* Links to Sign-up Login form */}
         <Link to="/signup" className="sign-up-button-link">
-          <li className="navbar-link">Log in/Sign up</li>
+          <li className="navbar-link">Sign up</li>
         </Link>
       </ul>
     </div>
