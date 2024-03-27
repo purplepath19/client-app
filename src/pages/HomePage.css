@@ -1,11 +1,21 @@
 .main-image {
     font-size: 30px;
     border: 1px solid black;
-    padding: 100px;
+    background-color: gray;
+    margin-top: 20px;
+    height: 500px;
+    margin: none;
+    object-fit: cover;
+    width: 100%;
+    /* Image will go behind home title and description: */
+    /* position: absolute;  */
+    z-index: -1;
+    
   }
   
   .card-container {
     display: flex;
+    margin-top: 10px;
     justify-content: space-between;
   }
   
@@ -13,6 +23,7 @@
     flex: 0 0 calc(33.33% - 20px);
     box-sizing: border-box;
     border: 1px solid black;
+    padding: 40px;
   }
   
   /* The image will take the whole container and they will be links */
@@ -20,3 +31,8 @@
     max-width: 100%;
   }
   
+
+  .quote{
+    text-align: center;
+    font-size: 50px;
+  }
