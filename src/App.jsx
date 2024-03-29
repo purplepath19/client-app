@@ -20,7 +20,7 @@ function App() {
   };
 
   const NotLoggedIn = () => {
-    return !getToken() ? <Outlet /> : <Navigate to="/" />;
+    return !getToken() ? <Outlet /> : <Outlet />;//<Navigate to="/" />;
   };
 
   return (
@@ -41,9 +41,9 @@ function App() {
 
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<LoginPage />} />
-          <Route path="info" element={<InfoPage />} />
+          <Route path="/info" element={<InfoPage />} />
           <Route path="/main" element={<MainPage />} />
-          <Route path="resources" element={<Resources /> } /> 
+          <Route path="/resources" element={<Resources /> } /> 
 
         </Route>
 

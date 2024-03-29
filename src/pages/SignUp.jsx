@@ -1,49 +1,3 @@
-// import React from "react";
-// import { useState } from "react";
-// import { Link } from "react-router-dom";
-// // import HomePage from "../components/HomePage";
-
-// const SignUp = () => {
-// //State Variables:
-// const [email, setEmail] = useState('');
-// const [password, setPassword] = useState ('');
-// const [isLogin, setIsLogin] = useState (false); //Initial value of isLogin
-
-// //Function to handle form submission.
-// const handleSubmit = (e) => {
-//     e.preventDefault();
-
-// }
-
-//   return (
-//     <div>
-
-// {/* Will check if isLogin state variable is true or false */}
-//       <h1> {isLogin ? 'Login' : 'Sign Up '}  </h1>
-
-//       {/* SIGN UP/ LOGIN FORM */}
-//       <form onSubmit={handleSubmit}>
-//       <div>
-//         <label> Email:</label>
-//         <input type="email" className="email-input" value={email} onChange={(e) => setEmail(e.target.value)}
-//             required />
-//       </div>
-//       <div>
-//         <label> Password:</label>
-//         <input type="password" className="password-input" value={password} onChange={(e) => setPassword(e.target.value)}
-//             required />
-//       </div>
-//       {/* Submit Button */}
-//       <div>
-//       <button type="submit" className="submit-button">Submit</button>
-//       </div>
-
-//       </form>
-
-//     </div>
-//   );
-// };
-
 // CODE ALONG CODE
 
 // src/pages/SignupPage.jsx
@@ -51,7 +5,7 @@
 import { useState, useContext } from "react";
 import { AuthContext } from "../context/auth.context";
 import { Link, useNavigate } from "react-router-dom";
-import { post } from "../services/authService";
+import { axiosDelete, post } from "../services/authService";
 
 function SignUp() {
   //   const [email, setEmail] = useState("");
@@ -97,6 +51,20 @@ function SignUp() {
       });
   };
 
+
+  // Delete Handller 
+  // const handleDelete = (e) =>{
+  //   e.preventDefault();
+  //   axiosDelete("/")
+  //   .then(()=> {
+  //     console.log("Deleted!!!!!!!");
+  //   })
+  //   .catch(()=>{
+  //     console.log("Error with delete react reques", err)
+  //   })
+  // }
+
+
   return (
     <div className="sign-up-page">
       <h1>Sign Up</h1>
@@ -140,8 +108,10 @@ function SignUp() {
 
       {errorMessage && <p className="error-message">{errorMessage}</p>}
 
-      <p>Already have account?</p>
-      <Link to={"/login"}> Login</Link>
+      <p>Already have account?  <Link to={"/login"}> Login</Link> </p> 
+
+      {/* Delete button */}
+      {/* <p> Delete Account <button type="submit" className="delete-button" onClick={()=>handleDelete}> Delete </button> </p>  */}
     </div>
   );
 }

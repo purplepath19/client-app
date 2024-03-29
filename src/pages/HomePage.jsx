@@ -22,7 +22,7 @@ const HomePage = () => {
       </div>
 
       {/* Main Image */}
-      <div className="main-image">IMAGE LOOP HERE</div>
+      <div className="main-image">IMG</div>
 
       {/* Cards here  */}
       <div className="card-container">
