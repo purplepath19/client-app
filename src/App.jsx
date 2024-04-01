@@ -9,6 +9,8 @@ import MainPage from "./pages/MainPage";
 import LoginPage from "./pages/LoginPage";
 import InfoPage from "./pages/InfoPage";
 import Resources from "./pages/Resources";
+import ProfilePage from "./pages/ProfilePage";
+import SchoolPage from "./pages/SchoolPage";
 
 function App() {
   const getToken = () => {
@@ -44,6 +46,8 @@ function App() {
           <Route path="/info" element={<InfoPage />} />
           <Route path="/main" element={<MainPage />} />
           <Route path="/resources" element={<Resources /> } /> 
+          <Route path="/profile" element={<ProfilePage /> } /> 
+          <Route path="/schools" element={<SchoolPage /> } /> 
 
         </Route>
 

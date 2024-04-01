@@ -68,6 +68,8 @@ function LoginPage() {
         />
 
         <button type="submit">Login</button>
+        {/* Link to profile page when logged in  */}
+        
       </form>
       {errorMessage && <p className="error-message">{errorMessage}</p>}
 

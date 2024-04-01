@@ -1,0 +1,42 @@
+.school-list-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+
+
+  .school-item {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 40px;
+    width: 300px; 
+    box-sizing: border-box; 
+  }
+
+
+  
+
+  .text-area-input{
+    padding: 20px;
+  }
+
+
+
+
+  /* .delete-button {
+    background-color: #ff4d4f;
+    border: none;
+    border-radius: 50%;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px;
+  } */
