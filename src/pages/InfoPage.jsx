@@ -1,11 +1,21 @@
 import React from 'react';
+import classroomImg from "../assets/classroom.png"
+
 
 
 const InfoPage = () => {
     return (
         <div className="container">
-            <h1 className="heading">Info</h1>
+            <h1 className="heading"> </h1>
+
+
+            {/* Image */}
+            <div className="info-image">
+            <img src={classroomImg} alt='myImg'/>
+            </div>
+
             <p className="paragraph">
+
                 Welcome to our application! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et velit sed odio faucibus bibendum sit amet et erat. Nulla in suscipit nulla. Aenean euismod dapibus turpis, eget finibus lectus finibus et. Donec hendrerit blandit purus, vel tincidunt ex. 
             </p>
             <p className="paragraph">

@@ -70,13 +70,13 @@ const SchoolPage = () => {
   //RETURN
   return (
     <div>
-      <h1> Schools </h1>
+      <h1>  </h1>
       <div className="school-container">
         <div>
           {/* SCHOOL FORM  */}
           {/* Form onSubmit */}
           <form onSubmit={handleAddSchool}>
-            <label className="school-label"> School: </label>
+            <label className="school-label"> New School: </label>
             <input
               type="text"
               name="school"
@@ -90,7 +90,7 @@ const SchoolPage = () => {
 
         {/* Render list of schools using map() */}
         <div className="school-list-container">
-          <h2> School List </h2>
+          <h2> </h2>
           <ul>
             {schools.map((school) => {
               // console.log("school", school)

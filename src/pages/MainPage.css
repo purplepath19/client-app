@@ -1,0 +1,29 @@
+.main-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .image-container {
+    flex: 1;
+  }
+  
+  .text-container {
+    flex: 2;
+    padding: 0 20px;
+  }
+  
+  .gif {
+    max-width: 300px; 
+    border-radius: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .main-container {
+      flex-direction: column;
+    }
+  
+    .text-container {
+      padding: 20px 0;
+    }
+  }
+  
