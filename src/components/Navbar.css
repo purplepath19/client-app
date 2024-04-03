@@ -17,7 +17,10 @@
     color: #333; /* Change text color */
     text-decoration: none;
   }
-
+.main-name{
+  font-family: "Patrick Hand SC";
+  font-size: 50px;
+}
 
 .logo-link{
     cursor:pointer;

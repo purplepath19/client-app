@@ -20,7 +20,7 @@ const Navbar = () => {
         </Link>
       </h2>
 
-      <h2> Waldorf Education  </h2>
+      <h2 className="main-name"> WaldorfWise </h2>
 
       <ul>
       {!isLoggedIn && (

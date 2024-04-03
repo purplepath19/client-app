@@ -1,16 +1,41 @@
+/* 
 .main-image {
-    font-size: 30px;
-    border: 1px solid black;
-    margin-top: 20px;
-    height: 100vh;
-    margin: none;
-    object-fit: cover;
-    width: 100%;
-    /* Image will go behind home title and description: */
-    /* position: absolute;  */
-    z-index: -1;
-    
-  }
+  max-width: 100%; 
+  margin: 0 auto; 
+ 
+} */
+
+.home-image {
+  width: 100%; 
+  height: auto; 
+  display: block; 
+}
+
+.p-tag {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  color: white; 
+  font-size: 70px; 
+  text-align: center; 
+  z-index: 1; 
+  font-family: "Sacramento";
+}
+
+.learn-more {
+  position: absolute;
+  top: 80%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(145, 233, 145); 
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
   
   .card-container {
     display: flex;
@@ -21,7 +46,7 @@
   .card {
     box-sizing: border-box;
     cursor: pointer;
-    border: 1px solid black;
+    border: none;
     padding: 20px;
     height: 100px;
     display: flex;
@@ -29,7 +54,6 @@
     justify-content: center;
     text-align: center;
     text-decoration: none;
-    color: black;
     background-color: #f9f9f9; 
   }
   
@@ -47,6 +71,14 @@
   }
   
 
+
+
+
+
+
+
+
+  
   .container {
     display: flex; 
   }
@@ -56,11 +88,11 @@
     margin-right: 20px; 
   }
 
-  
+
   .homeVideo {
     width: 80%; 
     border-radius: 20px;
-    clip-path: ellipse(50% 80% at center);
+    /* clip-path: ellipse(50% 80% at center); */
   }
   
   .info-container {
