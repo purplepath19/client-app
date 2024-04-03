@@ -1,22 +1,42 @@
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
 
-  .profile-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-  }
+.page-title {
+  font-size: 35px;
+  margin-bottom: 20px;
+  font-family: "Patrick Hand SC";
+}
+
+.profile-image {
+  width: 150px; 
+  height: 150px; 
+  border-radius: 50%; 
+  margin-bottom: 10px;
+}
+
+.update-profile-button {
+  text-decoration: none;
 
 
-  .update-profile-button a {
-    display: inline-block;
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  .update-profile-button a:hover {
-    background-color: #0056b3;
-  }
+} 
+
+.name-class,
+.username-class,
+.location-class,
+.bio-class {
+  font-size: 18px; /* Adjust size as needed */
+  margin-bottom: 10px;
+}
+
+.location-class {
+  font-style: italic; /* Italicize location text */
+}
+
+.bio-class {
+  font-style: italic; /* Italicize bio text */
+}

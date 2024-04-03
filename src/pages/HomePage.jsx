@@ -13,36 +13,34 @@ const HomePage = () => {
 
   <p className="p-tag"> Unlock the magic of Waldorf </p>
 
+    
+     
+     <Link to="/info" className="info-page-link"> 
      <button className="learn-more"> Learn More 
-     
-     {/* <Link to="/main" className="info-page-link">
-      */}
-     
      </button>
+     </Link>
       
 
       </div>
 
         {/* Cards here  */}
         <div className="card-container">
-        {/* Card ONE: Links to Info */}
-        <div className="card">
-          <Link to="/info" className="info-page-link">
-            Info
-          </Link>
-        </div>
+        
+
+
         {/* Card TWO: Links to main page */}
         <div className="card">
           <Link to="/main" className="info-page-link">
             Main Page
           </Link>
         </div>
+
+
         {/* Card THREE: Links to Resources */}
-        <div className="card">
-          <Link to="/resources" className="resources-page-link">
-            Resources
-          </Link>
-        </div>
+        {/* <div className="card">
+      
+        </div> */}
+        
       </div>
 
 

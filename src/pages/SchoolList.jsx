@@ -47,4 +47,4 @@ const SchoolList = () => {
   )
 }
 
-export default SchoolList
+export default SchoolList;

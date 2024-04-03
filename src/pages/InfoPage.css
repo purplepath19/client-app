@@ -1,5 +1,42 @@
+.info-main-container{
+  background-image: url(../assets/pastel.png);
+}
+
+.info-page-container {
+  max-width: 800px; 
+  margin: 0 auto; 
+  padding: 20px; 
+  text-align: center; 
+}
 
 .paragraph {
   line-height: 2.0;
   color: #333;
+}
+
+.info-image{
+ width: 50%;
+
+}
+
+ .paragraph {
+  
+} 
+
+/* CSS */
+
+.resources-page-link {
+  display: inline-block;
+  background-color: purple; 
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none; 
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.resources-page-link:hover {
+  background-color: #b1a830; 
+  font-weight: bold;
+  text-decoration: none;
 }

@@ -8,17 +8,17 @@ const ProfilePage = () => {
     const { user } = useContext(AuthContext)
 
 return (
-    <div> 
-<h1> Profile Page </h1>
+    <div className="profile-container"> 
+<h1 className="page-title"> Profile Page </h1>
 
 {
     user &&
     <>
        <img src={user.profileImage} className="profile-image" alt="image-icon" /> 
-        <h2>Name: {user.name}</h2>
-        <h2> Username: {user.username}</h2>
-        <p> Location {user.location}</p>
-        <p>Bio: {user.bio}</p>
+        <h2 className="name-class">Name: {user.name}</h2>
+        <h2 className="name-class"> Username: {user.username}</h2>
+        <p className="location-class"> Location {user.location}</p>
+        <p className="bio-class">Bio: {user.bio}</p>
     
     </>
 }

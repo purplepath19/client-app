@@ -1,32 +1,38 @@
-import React from 'react';
+import React from "react";
 import classroomImg from "../assets/works.png";
-
-
+import { Link } from "react-router-dom";
 
 const InfoPage = () => {
-    return (
-        <div>
-            <h1 className="heading"> </h1>
+  return (
 
+<div className="info-main-container"> 
 
-            {/* Image */}
-            <div className="info-image-container">
-            <img src={classroomImg} className='info-image' alt='myImg'/>
-            </div>
+    <div className="info-page-container">
+      <h1 className="page-title">  </h1>
 
-            <p className="paragraph">
+      {/* Image */}
+      <div className="info-image-container">
+        <img src={classroomImg} className="info-image" alt="myImg" />
+      </div>
 
-                Welcome to our application! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et velit sed odio faucibus bibendum sit amet et erat. Nulla in suscipit nulla. Aenean euismod dapibus turpis, eget finibus lectus finibus et. Donec hendrerit blandit purus, vel tincidunt ex. 
-            </p>
-            <p className="paragraph">
-                Nullam eleifend elit ac ligula fermentum, ut scelerisque urna efficitur. Nam eu quam mauris. Duis eu est vel sem dictum molestie. Fusce condimentum magna vel diam accumsan, ac faucibus lorem sodales. Duis id interdum quam. Ut consectetur justo et facilisis facilisis. 
-            </p>
-            <p className="paragraph">
-                Please feel free to explore our application and don't hesitate to contact us if you have any questions or concerns. Thank you for using our app!
-            </p>
+      <p className="paragraph">
+      Waldorf education emphasizes holistic development, 
+      fostering creativity, critical thinking, and social 
+      responsibility. By integrating arts, movement, and academic subjects, 
+      Waldorf nurtures students' individuality and fosters a lifelong love for
+       learning. Through a balanced approach that values both academic and 
+       emotional intelligence, Waldorf education prepares students to navigate 
+       an ever-changing world with confidence and compassion.
+      </p>
 
-        </div>
-    );
+      <div className="info-resources-container">
+        <Link to="/resources" className="resources-page-link">
+          Resources
+        </Link>
+      </div>
+    </div>
+    </div>
+  );
 };
 
 export default InfoPage;

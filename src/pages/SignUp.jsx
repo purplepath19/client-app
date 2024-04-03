@@ -6,6 +6,7 @@ import { useState, useContext } from "react";
 import { AuthContext } from "../context/auth.context";
 import { Link, useNavigate } from "react-router-dom";
 import { axiosDelete, post } from "../services/authService";
+import  signImage from "../assets/grain.png";
 
 function SignUp() {
   //   const [email, setEmail] = useState("");
@@ -66,12 +67,21 @@ function SignUp() {
 
 
   return (
+
+    
+
+
     <div className="sign-up-page">
+<div className="sign-up-image-container"> 
+<img  className="sign-up-image" src={signImage} alt="img" /> 
+</div>
+
+<div className="sign-up-container"> 
       <h1>Sign Up</h1>
 
       <form onSubmit={handleSignupSubmit}>
         <label className="labels">Email:</label>
-        <input
+        <input className="inputs"
           type="email"
           name="email"
           value={newUser.email}
@@ -112,6 +122,7 @@ function SignUp() {
 
       {/* Delete button */}
       {/* <p> Delete Account <button type="submit" className="delete-button" onClick={()=>handleDelete}> Delete </button> </p>  */}
+    </div>
     </div>
   );
 }
