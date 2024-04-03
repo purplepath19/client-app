@@ -11,6 +11,8 @@ import InfoPage from "./pages/InfoPage";
 import Resources from "./pages/Resources";
 import ProfilePage from "./pages/ProfilePage";
 import SchoolPage from "./pages/SchoolPage";
+import Map from "./pages/Map";
+import ProfileUpdate from './pages/ProfileUpdate'
 
 function App() {
   const getToken = () => {
@@ -22,37 +24,31 @@ function App() {
   };
 
   const NotLoggedIn = () => {
-    return !getToken() ? <Outlet /> : <Outlet />;//<Navigate to="/" />;
+    return !getToken() ? <Outlet /> : <Navigate to="/" />;
   };
 
   return (
     <div className="App">
-    
       <Navbar />
 
       <Routes>
         <Route exact path="/" element={<HomePage />} />
+        <Route path="/info" element={<InfoPage />} />
+        <Route path="/main" element={<MainPage />} />
+        <Route path="/resources" element={<Resources />} />
+        <Route path="/schools" element={<SchoolPage />} />
+        <Route path="/map" element={<Map /> } /> 
 
         <Route element={<LoggedIn />}>
-
-
-
+          <Route path="/profile" element={<ProfilePage />} />
+          <Route path='/profile/update' element={<ProfileUpdate />} />
         </Route>
 
         <Route element={<NotLoggedIn />}>
-
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/info" element={<InfoPage />} />
-          <Route path="/main" element={<MainPage />} />
-          <Route path="/resources" element={<Resources /> } /> 
-          <Route path="/profile" element={<ProfilePage /> } /> 
-          <Route path="/schools" element={<SchoolPage /> } /> 
-
         </Route>
-
       </Routes>
-
     </div>
   );
 }

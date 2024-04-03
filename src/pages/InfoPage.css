@@ -1,24 +1,5 @@
-.container {
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-.heading {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.info-image {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.info-image img {
-  max-width: 100%;
-  height: auto;
-}
 
 .paragraph {
-  line-height: 1.6;
-  margin-bottom: 20px;
+  line-height: 2.0;
+  color: #333;
 }

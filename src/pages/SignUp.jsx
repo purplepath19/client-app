@@ -37,7 +37,7 @@ function SignUp() {
         console.log("This is the new user ===>", response.data);
         storeToken(response.data.authToken);
         authenticateUser();
-        navigate("/");
+        navigate("/profile"); //navigate to other page
       })
       .catch((err) => {
         console.log(err);

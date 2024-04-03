@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { get } from "../services/authService";
 
 const SchoolPage = () => {
   // State Variables
@@ -16,7 +17,7 @@ const SchoolPage = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/schools");
+      const response = await get("/schools");
       setSchools(response.data);
     } catch (error) {
       console.log("ERR Fetching Data >>>", error);

@@ -1,17 +1,17 @@
 import React from 'react';
-import classroomImg from "../assets/classroom.png"
+import classroomImg from "../assets/works.png";
 
 
 
 const InfoPage = () => {
     return (
-        <div className="container">
+        <div>
             <h1 className="heading"> </h1>
 
 
             {/* Image */}
-            <div className="info-image">
-            <img src={classroomImg} alt='myImg'/>
+            <div className="info-image-container">
+            <img src={classroomImg} className='info-image' alt='myImg'/>
             </div>
 
             <p className="paragraph">
@@ -24,6 +24,7 @@ const InfoPage = () => {
             <p className="paragraph">
                 Please feel free to explore our application and don't hesitate to contact us if you have any questions or concerns. Thank you for using our app!
             </p>
+
         </div>
     );
 };

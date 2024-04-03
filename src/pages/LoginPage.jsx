@@ -35,10 +35,10 @@ function LoginPage() {
 
     post("/auth/login", thisUser)
       .then((response) => {
-        console.log("Login response ===>", response.data);
+        console.log("Login response ===>", response.data, thisUser);
         storeToken(response.data.authToken);
         authenticateUser();
-        navigate("/");
+        navigate(`/profile`);
       })
       .catch((error) => {
         const errorDescription = error.response.data.message;
@@ -69,12 +69,18 @@ function LoginPage() {
 
         <button type="submit">Login</button>
         {/* Link to profile page when logged in  */}
+        <Link to='/profile'> </Link>
+     
+        
+        
         
       </form>
       {errorMessage && <p className="error-message">{errorMessage}</p>}
 
       <p>Don't have an account yet?</p>
       <Link to={"/signup"}> Sign Up</Link>
+
+      
     </div>
   );
 }
