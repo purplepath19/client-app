@@ -7,7 +7,7 @@ const ProfileUpdate = () => {
 
     const [thisUser, setThisUser] = useState(null)
 
-    const { user } = useContext(AuthContext)
+    const { user, setUser } = useContext(AuthContext)
 
     const navigate = useNavigate()
     
@@ -24,7 +24,10 @@ const ProfileUpdate = () => {
 
         put(`/users/${thisUser.username}`, thisUser)
             .then((response) => {
+                const newUser = { _id, name, username, email } = response.data;
                 console.log("this is the udpated user ===>", response.data)
+                // setThisUser(newUser);
+                setUser(newUser);
                 navigate('/profile')
             })
             .catch((err) => {
