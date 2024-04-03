@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
 import { get } from "../services/authService";
+import axios from "axios";
 
 const SchoolPage = () => {
   // State Variables

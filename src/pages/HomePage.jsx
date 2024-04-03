@@ -13,7 +13,12 @@ const HomePage = () => {
 
   <p className="p-tag"> Unlock the magic of Waldorf </p>
 
-     <button className="learn-more"> Learn More </button>
+     <button className="learn-more"> Learn More 
+     
+     {/* <Link to="/main" className="info-page-link">
+      */}
+     
+     </button>
       
 
       </div>

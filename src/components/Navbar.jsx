@@ -23,6 +23,9 @@ const Navbar = () => {
       <h2 className="main-name"> WaldorfWise </h2>
 
       <ul>
+          <Link to='/schools'>    
+            <li className="navbar-link">See Waldorf Schools</li>
+          </Link>
       {!isLoggedIn && (
         <>
           <Link to="/login" className="login-button-link">
@@ -38,8 +41,16 @@ const Navbar = () => {
 
       {
         isLoggedIn &&
+
+        <>
+          <Link to='/add-school'>    
+            <li className="navbar-link">Add A School</li>
+          </Link>
+          <li className="navbar-link"><button onClick={() => logOutUser()}>Logout</button></li>
         
-        <li className="navbar-link"><button onClick={() => logOutUser()}>Logout</button></li>
+        </>
+        
+
         
       }
 

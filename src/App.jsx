@@ -13,6 +13,10 @@ import ProfilePage from "./pages/ProfilePage";
 import SchoolPage from "./pages/SchoolPage";
 import Map from "./pages/Map";
 import ProfileUpdate from './pages/ProfileUpdate'
+import AddSchool from './pages/AddSchool'
+import SchoolList from "./pages/SchoolList";
+import SchoolDetails from "./pages/SchoolDetails";
+import EditSchool from "./pages/EditSchool";
 
 function App() {
   const getToken = () => {
@@ -36,12 +40,15 @@ function App() {
         <Route path="/info" element={<InfoPage />} />
         <Route path="/main" element={<MainPage />} />
         <Route path="/resources" element={<Resources />} />
-        <Route path="/schools" element={<SchoolPage />} />
+        <Route path="/schools" element={<SchoolList />} />
+        <Route path='/school-details/:schoolId' element={<SchoolDetails />} />
         <Route path="/map" element={<Map /> } /> 
 
         <Route element={<LoggedIn />}>
           <Route path="/profile" element={<ProfilePage />} />
           <Route path='/profile/update' element={<ProfileUpdate />} />
+          <Route path='/add-school' element={<AddSchool />} />
+          <Route path='/edit-school/:schoolId' element={<EditSchool />} />
         </Route>
 
         <Route element={<NotLoggedIn />}>
