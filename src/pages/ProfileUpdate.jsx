@@ -26,9 +26,8 @@ const ProfileUpdate = () => {
             .then((response) => {
                 const { _id, name, username, email } = response.data;
                 const newUser = { _id, name, username, email };
-                console.log("this is the udpated user ===>", response.data)
-               
-                setUser(newUser);
+                console.log("this is the udpated user ===>", response.data)       
+                setUser(response.data);
                 navigate('/profile')
             })
             .catch((err) => {
