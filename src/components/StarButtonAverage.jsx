@@ -1,10 +1,10 @@
 
 import { Rating } from 'react-simple-star-rating';
 
-const StarButtonAverage = ({ overallRating }) => {
+const StarButtonAverage = ({ overallRating, ...other }) => {
  
       return (
-        <div>
+        <div className="star-average">
           <Rating
             size={42}
             emptyStyle={{ display: "flex" }}

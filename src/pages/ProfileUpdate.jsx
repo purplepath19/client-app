@@ -21,13 +21,13 @@ const ProfileUpdate = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-
+        
         put(`/users/${thisUser.username}`, thisUser)
             .then((response) => {
-                
-                const newUser = { _id, name, username, email } = response.data;
+                const { _id, name, username, email } = response.data;
+                const newUser = { _id, name, username, email };
                 console.log("this is the udpated user ===>", response.data)
-                // setThisUser(newUser);
+               
                 setUser(newUser);
                 navigate('/profile')
             })
@@ -35,6 +35,7 @@ const ProfileUpdate = () => {
                 console.log(err)
             })
     }
+
      
     useEffect(() => {
 

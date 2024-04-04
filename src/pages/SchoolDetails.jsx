@@ -7,7 +7,7 @@ import StarButtonAverage from "../components/StarButtonAverage";
 import MapContainer from "../components/MapContainer";
 import AddReview from "../components/AddReview";
 import { returnRelativeTime } from "../services/time";
-import "./SchoolPage.css";
+import "./SchoolDetails.css";
 
 const SchoolDetails = () => {
   const [thisSchool, setThisSchool] = useState(null);
@@ -54,9 +54,9 @@ const SchoolDetails = () => {
   }, [schoolId]);
 
   return (
-    <div className="school-details-container">
+    <div>
       {thisSchool && (
-        <div>
+        <div className="details-base">
           <h2>{thisSchool.name}</h2>
 
           <StarButtonAverage overallRating={average} />
@@ -68,11 +68,10 @@ const SchoolDetails = () => {
               </button>
             </div>
           )}
-
           <MapContainer lat={thisSchool.latitude} lng={thisSchool.longitude} />
 
           {!adding && (
-            <button onClick={() => setAdding(true)}>Add a review</button>
+            <div className="add-review-base"><button onClick={() => setAdding(true)}>Add a review</button></div>
           )}
 
           {adding && (
@@ -84,11 +83,11 @@ const SchoolDetails = () => {
           )}
 
           {thisSchool.reviews.length > 0 && (
-            <>
+            <div className="reviews-base">
               {thisSchool.reviews
                 .map((review) => {
                   return (
-                    <div>
+                    <div className="review-card-base">
                       <StarButton stars={review.rating} read={true} />
                       <h3>{review.comment}</h3>
                       <p>- {review.author.username}</p>
@@ -97,7 +96,7 @@ const SchoolDetails = () => {
                   );
                 })
                 .reverse()}
-            </>
+            </div>
           )}
         </div>
       )}

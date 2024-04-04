@@ -50,12 +50,12 @@ const HomePage = () => {
 
 <div className="container"> 
       <div className="video-container">
-        <video controls autoPlay loop className="homeVideo">
+        {/* <video controls autoPlay loop className="homeVideo">
           <source
             src="https://res.cloudinary.com/dplxry5mi/video/upload/qcjlv9mfbxqni5sdlrni.mov"
             type="video/mp4"
           />
-        </video>
+        </video> */}
       </div>
 
       {/* Info/description */}
