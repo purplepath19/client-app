@@ -47,20 +47,26 @@ function LoginPage() {
   };
 
   return (
-    <div className="LoginPage">
+    <div className="login-page">
+
+
+
+      <div className="login-container"> 
       <h1>Login</h1>
 
       <form onSubmit={handleLoginSubmit}>
-        <label>Email:</label>
-        <input
+        <label></label>
+        <input className="inputs"
+        placeholder="Email"
           type="email"
           name="email"
           value={thisUser.email}
           onChange={handleTextChange}
         />
 
-        <label>Password:</label>
-        <input
+        <label></label>
+        <input className="inputs"
+        placeholder="Password"
           type="password"
           name="password"
           value={thisUser.password}
@@ -72,14 +78,14 @@ function LoginPage() {
         <Link to='/profile'> </Link>
      
         
+      <p className="acct-tags">Don't have an account yet?</p>
+      <Link to={"/signup"}> Sign Up</Link>
         
         
       </form>
       {errorMessage && <p className="error-message">{errorMessage}</p>}
 
-      <p>Don't have an account yet?</p>
-      <Link to={"/signup"}> Sign Up</Link>
-
+</div>
       
     </div>
   );

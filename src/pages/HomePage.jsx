@@ -29,11 +29,11 @@ const HomePage = () => {
 
 
         {/* Card TWO: Links to main page */}
-        <div className="card">
+        {/* <div className="card">
           <Link to="/main" className="info-page-link">
             Main Page
           </Link>
-        </div>
+        </div> */}
 
 
         {/* Card THREE: Links to Resources */}

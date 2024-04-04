@@ -28,11 +28,11 @@ const Navbar = () => {
           </Link>
       {!isLoggedIn && (
         <>
-          <Link to="/login" className="login-button-link">
+          <Link to="/login" className="log">
             <li className="navbar-link">Login</li>
           </Link>
 
-          <Link to="/signup" className="sign-up-button-link">
+          <Link to="/signup" className="log">
             <li className="navbar-link">Sign up</li>
           </Link>
 

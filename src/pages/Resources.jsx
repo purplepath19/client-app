@@ -11,6 +11,8 @@ const Resources = () => {
 
 <h3 className="resources-title"> Links </h3>
 
+<p className="news-links-container"> 
+
 <p className="helpful-links-one">  
   <a href="https://www.businessinsider.com/sherry-turkle-why-tech-moguls-send-their-kids-to-anti-tech-schools-2017-11"> An MIT psychologist explains why so many tech moguls send their kids to anti-tech schools </a>
 </p>
@@ -19,8 +21,7 @@ const Resources = () => {
   <a href="https://www.cnbc.com/2019/06/07/waldorf-schools-teach-without-technology-heres-what-it-is-like.html"> Inside the tech-free school where high-tech parents are sending their kids</a>
 </p>
 
-
-
+</p>
 
 
 

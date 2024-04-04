@@ -6,7 +6,7 @@ import { useState, useContext } from "react";
 import { AuthContext } from "../context/auth.context";
 import { Link, useNavigate } from "react-router-dom";
 import { axiosDelete, post } from "../services/authService";
-import  signImage from "../assets/grain.png";
+import  signImage from "../assets/class.png";
 
 function SignUp() {
   //   const [email, setEmail] = useState("");
@@ -73,45 +73,49 @@ function SignUp() {
 
     <div className="sign-up-page">
 <div className="sign-up-image-container"> 
-<img  className="sign-up-image" src={signImage} alt="img" /> 
+{/* <img  className="sign-up-image" src={signImage} alt="img" />  */}
 </div>
 
 <div className="sign-up-container"> 
-      <h1>Sign Up</h1>
+      <h1>Create Account</h1>
 
       <form onSubmit={handleSignupSubmit}>
-        <label className="labels">Email:</label>
+        <label className="labels"></label>
         <input className="inputs"
+        placeholder="Email"
           type="email"
           name="email"
           value={newUser.email}
           onChange={handleTextChange}
         />
 
-        <label className="labels">Password:</label>
-        <input
+        <label className="labels"></label>
+        <input className="inputs"
+        placeholder="Password"
           type="password"
           name="password"
           value={newUser.password}
           onChange={handleTextChange}
         />
 
-        <label className="labels">Name:</label>
-        <input
+        <label className="labels"></label>
+        <input className="inputs"
+        placeholder="Name"
           type="text"
           name="name"
           value={newUser.name}
           onChange={handleTextChange}
         />
 
-        <label className="labels">Username:</label>
-        <input
+        <label className="labels"></label>
+        <input className="inputs"
+          placeholder="Username"
           type="text"
           name="username"
           value={newUser.username}
           onChange={handleTextChange}
         />
-        <button type="submit" className="submit-button">
+        <button type="submit" className="sign-up-button">
           Sign Up
         </button>
       </form>

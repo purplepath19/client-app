@@ -18,6 +18,9 @@ import SchoolList from "./pages/SchoolList";
 import SchoolDetails from "./pages/SchoolDetails";
 import EditSchool from "./pages/EditSchool";
 
+// Tailwind
+import "../src/index.css";
+
 function App() {
   const getToken = () => {
     return localStorage.getItem("authToken");

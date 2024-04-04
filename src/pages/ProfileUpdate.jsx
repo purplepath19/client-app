@@ -24,6 +24,7 @@ const ProfileUpdate = () => {
 
         put(`/users/${thisUser.username}`, thisUser)
             .then((response) => {
+                
                 const newUser = { _id, name, username, email } = response.data;
                 console.log("this is the udpated user ===>", response.data)
                 // setThisUser(newUser);
@@ -34,14 +35,12 @@ const ProfileUpdate = () => {
                 console.log(err)
             })
     }
-    
-    
+     
     useEffect(() => {
 
         if (user) {
             setThisUser(user)
         }
-
     }, [user])
 
 

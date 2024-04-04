@@ -1,86 +1,101 @@
-import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { post } from '../services/authService'
-import { fileChange } from '../services/photoService'
-import LocationForm from '../components/LocationForm'
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { post } from "../services/authService";
+import { fileChange } from "../services/photoService";
+import LocationForm from "../components/LocationForm";
 
 const AddSchool = () => {
+  const [newSchool, setNewSchool] = useState({
+    address: "",
+    latitude: 0,
+    longitude: 0,
+    name: "",
+    description: "",
+    photo: "",
+  });
 
-    const [newSchool, setNewSchool] = useState({
-        address: "",
-        latitude: 0,
-        longitude: 0,
-        name: "",
-        description: "",
-        photo: ""
-    })
+  const [disabled, setDisabled] = useState(false);
 
-    const [disabled, setDisabled ] = useState(false)
+  const navigate = useNavigate();
 
-    const navigate = useNavigate()
+  const handleTextChange = (e) => {
+    setNewSchool((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
 
-    const handleTextChange = (e) => {
-        setNewSchool((prev) => ({...prev, [e.target.name]: e.target.value}))
-    }
+  const handlePhotoChange = (e) => {
+    setDisabled(true);
 
-    const handlePhotoChange = (e) => {
+    fileChange(e)
+      .then((response) => {
+        setNewSchool((prev) => ({ ...prev, photo: response.data.image }));
+        setDisabled(false);
+      })
+      .catch((err) => {
+        console.log(err);
+        setDisabled(false);
+      });
 
-        setDisabled(true)
+    console.log("Changing photo...");
+  };
 
-        fileChange(e)
-            .then((response) => {
-                setNewSchool((prev) => ({...prev, photo: response.data.image}))
-                setDisabled(false)
-            })
-            .catch((err) => {
-                console.log(err)
-                setDisabled(false)
-            })
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-
-        console.log("Changing photo...")
-    }
-
-    const handleSubmit = (e) => {
-        e.preventDefault()
-
-        post('/schools', newSchool)
-            .then((response) => {
-                console.log("this is the new school===>", response.data)
-                navigate('/schools')
-            })
-            .catch((err) => {
-                console.log(err)
-            })
-    }
+    post("/schools", newSchool)
+      .then((response) => {
+        console.log("this is the new school===>", response.data);
+        navigate("/schools");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   return (
     <div>
-        <h1>Add a Waldorf School</h1>
+      <h1> Add Schools in your area</h1>
 
-        <form onSubmit={handleSubmit}>
+<div className="add-school-form-container"> 
+      <form onSubmit={handleSubmit}>
+        <label className="add-school-labels">
+          <input
+            className="inputs"
+            placeholder="Add a School"
+            type="text"
+            onChange={handleTextChange}
+            name="name"
+            value={newSchool.name}
+          />
+        </label>
 
-            <label>
-                Name
-                <input type='text' onChange={handleTextChange} name='name' value={newSchool.name} />
-            </label>
+        <label className="add-school-labels">
+          <input
+            className="inputs"
+            placeholder="Description"
+            type="text"
+            onChange={handleTextChange}
+            name="description"
+            value={newSchool.description}
+          />
+        </label>
 
-            <LocationForm setNewSchool={setNewSchool} />
+        {/* Location Form  */}
+        <div className="location-form">
+          <LocationForm setNewSchool={setNewSchool} />
+        </div>
 
-            <label>
-                Photo
-                <input type='file' onChange={handlePhotoChange} />
-            </label>
-            <label>
-                Description
-                <input type='text' onChange={handleTextChange} name='description' value={newSchool.description}/>
-            </label>
+        <label className="add-school-labels">
+          Add Photo
+          <input type="file" onChange={handlePhotoChange} />
+        </label>
 
-
-            <button disable={disabled} type='submit'>Add School</button>
-        </form>
+        <button disable={disabled} type="submit">
+          Add School
+        </button>
+      </form>
     </div>
-  )
-}
+    </div>
+  );
+};
 
-export default AddSchool
+export default AddSchool;
